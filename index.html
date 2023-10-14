@@ -4,90 +4,43 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="блог, тильт, саморазвитие, интересы, рефлексия, читать, тильтостан">
     <meta name="description" content="блог для людей сообщества интернет">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
     <title>Тильтостан</title>
 </head>
 <body>
+<div class="conatiner">
 <header>
-    <div>
+    <div class="logo-wrapper">
         <img src="" alt=""> <!--- logo place -->
     </div>
     <nav>
-        <a href="index.html"><span class="nav-bar-text">Тильтостан</span></a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Про пиво</a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Про минералки</a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Моя карта</a>
+        <ul>
+            <li><a href="index.html">Домой</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Про пиво</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Про минералки</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Моя карта</a></li>
+        </ul>
     </nav>
 </header>
-<H1 align="center">Обо мне</H1>
-<section>
-    <h2>Мой распорядок дня:</h2>
-    <ul>
-        <li>
-            <ol>
-                <li>пресс качат</li>
-                <li>бегит</li>
-                <li>турник</li>
-                <li>анжуманя</li>
-            </ol>
-        </li>
-        <li>
-            <ol>
-                <li>пресс качат</li>
-                <li>бегит</li>
-                <li>турник</li>
-                <li>анжуманя</li>
-            </ol>
-        </li>
-    </ul>
-</section>
-<article>
-    <p>
-        <b>Анекдот:</b>
-        Работает мужик уборщиком в аэропорту. Всё время жалуется друзьям о том, как ему тяжело. На это ему всё время
-        предлагают уволится, а он и отвечает: "Как? И уйти из <i>авиации</i>??"
-    </p>
-    <pre>
-    ██╗░░░░░░█████╗░░█████╗░░█████╗░░█████╗░██╗░░░░░
-    ██║░░░░░██╔══██╗██╔══██╗██╔══██╗██╔══██╗██║░░░░░
-    ██║░░░░░██║░░██║██║░░██║██║░░██║██║░░██║██║░░░░░
-    ██║░░░░░██║░░██║██║░░██║██║░░██║██║░░██║██║░░░░░
-    ███████╗╚█████╔╝╚█████╔╝╚█████╔╝╚█████╔╝███████╗
-    ╚══════╝░╚════╝░░╚════╝░░╚════╝░░╚════╝░╚══════╝
-    </pre>
-</article>
-<br>
-<div>
-    А вот пример написанного мною кода :)
-    <pre>
-    <code>
-        public static boolean isEven(int n){
-            int n = Math.abs(n);
-            boolean out = true;
-            for (int i =0; i < n; ++i)
-                out = !out
-
-            return out;
-        }
-    </code>
-</pre>
+<div class="about-me">
+    <span id="about-me-text">Обо мне:</span>
+    <br>
+    <span><a href="html-experiences.html">Мои HTML навыки</a></span>
+</div>
 </div>
 
-<section>
-    <p>Часто многие спрашивают у меня мою формулу успеха, именно с вами, посетителями данного сайта, я, так уж и быть,
-        ею поделюсь: tilt<sup>2</sup> + work<sub>every single day (ofc not)</sub> + repeat<sub>instantly</sub> == success<sub>or not</sub></p>
-</section>
-<section>
-    Моя любимая цитата:
-    <br>
-    <q>
-        Вы разблокировали бонусный сайд-квест. К сдаче нужно приготовить мини-доклад о том, как работают методы...
-    </q> © <cite>Фреди Катс</cite>
-</section>
-<br>
-<aside><strong>Здесь могла быть ваша <em>реклама</em>!!!</strong></aside>
-<br>
+<a href="http://www.w3.org/html/logo/">
+    <img src="https://www.w3.org/html/logo/badge/html5-badge-h-connectivity-css3-device-graphics-multimedia-performance-semantics-storage.png"
+         width="357" height="64"
+         alt="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage"
+         title="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage">
+</a>
+
 <footer>
-    <div align="center">
+    <div class="contacts">
         <span><a href="https://t.me/bluebloodedshit">Telegram</a></span>,
         <span><a href="https://github.com/BlueBlood-dev">GitHub</a></span>
         <br>
@@ -95,9 +48,9 @@
     </div>
 </footer>
 </body>
-<script>
-    s = document.createElement('script');
-    s.src = 'https://rawcdn.githack.com/ArtMan-8/outline-prototype/e73da2a1ee9031564b56ed5d98541891f7123933/js/outline-control.js';
-    document.body.appendChild(s);
-</script>
+<!--<script>-->
+<!--    s = document.createElement('script');-->
+<!--    s.src = 'https://rawcdn.githack.com/ArtMan-8/outline-prototype/e73da2a1ee9031564b56ed5d98541891f7123933/js/outline-control.js';-->
+<!--    document.body.appendChild(s);-->
+<!--</script>-->
 </html>
