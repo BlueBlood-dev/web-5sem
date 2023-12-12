@@ -3,12 +3,14 @@ header {
     top: 0;
 }
 
+main {
+    min-height: 100dvh;
+}
+
 
 nav {
     width: 100%;
     background-color: #333333;
-    padding-left: 20px;
-    padding-right: 10px;
     /*position:  fixed;*/
     /*top: 0;*/
     align-items: center;
@@ -26,9 +28,10 @@ nav img {
     width: 100%;
 }
 
-.nav-item{
+.nav-item {
     width: 100%;
 }
+
 .nav-item a {
     display: block;
     padding: 10px 1px;
@@ -36,7 +39,7 @@ nav img {
     color: white;
 }
 
-.nav-item a.active{
+.nav-item a.active {
     text-decoration: underline;
 }
 
@@ -63,16 +66,16 @@ body {
     font-family: Comfortaa, cursive;
     color: #5c383c;
     margin: 0;
-    flex-direction: column;
-    display: flex;
-    min-height: 100vh;
+    /*flex-direction: column;*/
+    /*display: flex;*/
+    width: 100%;
 }
 
 footer {
     background-color: #333;
     text-align: center;
-    width: 100%;
     margin-top: auto;
+    width: 100%;
     bottom: 0;
 }
 
@@ -91,28 +94,22 @@ footer {
 
 .contacts {
     text-align: center;
+    width: 100%;
 }
 
-.contacts span a {
+.contacts a {
     text-decoration: none;
     color: white;
 }
 
-.contacts span a:visited {
+.contacts a:visited {
     color: slategrey;
 }
 
 .about-me {
-    margin-left: 3%;
-    margin-top: 3%;
-    padding-top: 1%;
-    width: 50%;
     box-shadow: 10px 5px 5px black;
     background-color: beige;
-}
-
-.about-me .about-me-text {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 
@@ -121,7 +118,9 @@ footer {
     box-shadow: dimgrey;
 }
 
-@media (min-device-width: 900px) .joke-code-flex {
+@media (min-device-width: 900px)
+
+.joke-code-flex {
     display: flex;
     background-color: antiquewhite;
     width: 100%;
@@ -195,6 +194,13 @@ footer {
     font-size: 20px;
 }
 
+.posts-themes-todo {
+    box-shadow: 10px 5px 5px black;
+    background-color: beige;
+    font-size: 20px;
+    height: 40px;
+}
+
 .car-ratings {
     width: 30%;
     background-color: beige;
@@ -247,6 +253,27 @@ footer {
 }
 
 
-footer .load-time{
+footer .load-time {
     color: #f0f0f0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: lightcyan;
+    color:  #5c383c;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+
+
+
+.todo-container {
+    margin-top: 40px;
+    background-color: beige;
+}
+
+.themes-container-wrapper {
+    background-color: beige;
 }

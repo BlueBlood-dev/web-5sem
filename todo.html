@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Моя карта</title>
     <script defer src="scripts/activePage.js"></script>
+    <script src="scripts/todoPosts.js" defer></script>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +22,18 @@
     </nav>
 </header>
 <main>
-
+    <div class="todo-container">
+        <form id="postsTodo">
+            <label for="theme">Тема поста:</label>
+            <input type="text" id="theme" name="theme" required>
+            <label for="explanations"> Дополнительные пояснения:</label>
+            <input type="text" id="explanations" name="explanations" required>
+            <button type="submit">Добавить тему для поста в лист</button>
+        </form>
+    </div>
+    <div class="themes-container-wrapper">
+        <div id="themesContainer"></div>
+    </div>
 </main>
 <footer>
     <span id="load-time"></span>
