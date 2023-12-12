@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         themeEntry.innerHTML = `<strong>${theme}</strong> - ${explanation} <button class="delete-button">Удалить</button>`;
         themesListContainer.appendChild(themeEntry);
 
+
         const deleteButton = themeEntry.querySelector(".delete-button");
         deleteButton.addEventListener("click", function() {
             themesListContainer.removeChild(themeEntry);
@@ -16,13 +17,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function updateLocalStorage() {
-        const bookEntries = Array.from(themesListContainer.querySelectorAll(".book-entry"));
-        const booksData = bookEntries.map(bookEntry => {
-            const title = bookEntry.querySelector("strong").textContent;
-            const author = bookEntry.textContent.split(" - ")[1];
-            return { title, author };
+        const themesEntries = Array.from(themesListContainer.querySelectorAll(".theme-entry"));
+        const themeData = themesEntries.map(themeEntry => {
+            const theme = themeEntry.querySelector("strong").textContent;
+            const explanation = themeEntry.textContent.split(" - ")[1];
+            return { title: theme, author: explanation };
         });
-        localStorage.setItem("themes", JSON.stringify(booksData));
+        localStorage.setItem("themes", JSON.stringify(themeData));
     }
 
     themeForm.addEventListener("submit", function(event) {
