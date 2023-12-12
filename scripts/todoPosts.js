@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function addThemeToContainer(theme, explanation) {
         const themeEntry = document.createElement("div");
         themeEntry.classList.add("theme-entry");
-        themeEntry.innerHTML = `<strong>${theme}</strong> - ${explanation} <button class="delete-button">Удалить</button>`;
+        themeEntry.innerHTML = `<strong>${theme}</strong> ---> <span>${explanation}</span> <button class="delete-button">Удалить</button>`;
         themesListContainer.appendChild(themeEntry);
 
 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const themesEntries = Array.from(themesListContainer.querySelectorAll(".theme-entry"));
         const themeData = themesEntries.map(themeEntry => {
             const theme = themeEntry.querySelector("strong").textContent;
-            const explanation = themeEntry.textContent.split(" - ")[1];
+            const explanation = themeEntry.querySelector("span").textContent;
             return { title: theme, author: explanation };
         });
         localStorage.setItem("themes", JSON.stringify(themeData));
@@ -47,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let savedThemes = localStorage.getItem("themes");
     if (savedThemes) {
         savedThemes = JSON.parse(savedThemes);
-        savedThemes.forEach(book => {
-            addThemeToContainer(book.title, book.author);
+        savedThemes.forEach(theme => {
+            addThemeToContainer(theme.title, theme.author);
         });
     }
 });
