@@ -1,30 +1,7 @@
+const themeForm = document.getElementById("postsTodo");
+const themesListContainer = document.getElementById("themesContainer");
+
 document.addEventListener("DOMContentLoaded", function() {
-    const themeForm = document.getElementById("postsTodo");
-    const themesListContainer = document.getElementById("themesContainer");
-
-    function addThemeToContainer(theme, explanation) {
-        const themeEntry = document.createElement("div");
-        themeEntry.classList.add("theme-entry");
-        themeEntry.innerHTML = `<strong>${theme}</strong> ---> <span>${explanation}</span> <button class="delete-button">Удалить</button>`;
-        themesListContainer.appendChild(themeEntry);
-
-
-        const deleteButton = themeEntry.querySelector(".delete-button");
-        deleteButton.addEventListener("click", function() {
-            themesListContainer.removeChild(themeEntry);
-            updateLocalStorage();
-        });
-    }
-
-    function updateLocalStorage() {
-        const themesEntries = Array.from(themesListContainer.querySelectorAll(".theme-entry"));
-        const themeData = themesEntries.map(themeEntry => {
-            const theme = themeEntry.querySelector("strong").textContent;
-            const explanation = themeEntry.querySelector("span").textContent;
-            return { title: theme, author: explanation };
-        });
-        localStorage.setItem("themes", JSON.stringify(themeData));
-    }
 
     themeForm.addEventListener("submit", function(event) {
         event.preventDefault();
@@ -52,4 +29,28 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+function addThemeToContainer(theme, explanation) {
+    const themeEntry = document.createElement("div");
+    themeEntry.classList.add("theme-entry");
+    themeEntry.innerHTML = `<strong>${theme}</strong> ---> <span>${explanation}</span> <button class="delete-button">Удалить</button>`;
+    themesListContainer.appendChild(themeEntry);
+
+
+    const deleteButton = themeEntry.querySelector(".delete-button");
+    deleteButton.addEventListener("click", function() {
+        themesListContainer.removeChild(themeEntry);
+        updateLocalStorage();
+    });
+}
+
+function updateLocalStorage() {
+    const themesEntries = Array.from(themesListContainer.querySelectorAll(".theme-entry"));
+    const themeData = themesEntries.map(themeEntry => {
+        const theme = themeEntry.querySelector("strong").textContent;
+        const explanation = themeEntry.querySelector("span").textContent;
+        return { title: theme, author: explanation };
+    });
+    localStorage.setItem("themes", JSON.stringify(themeData));
+}
 //comment
